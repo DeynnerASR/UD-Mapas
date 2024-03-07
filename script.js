@@ -62,6 +62,10 @@ function hadleResultSelected(event) {
         marker.remove();
     });
 
+    var user_marker = new tt.Marker({color: "red"})
+    .setLngLat([coords.longitude,coords.latitude])
+    .addTo(map);
+
     if(result.type === "Geography" || result.type === "POI"){
        let coord = result.position
        var newMarker = new tt.Marker()
